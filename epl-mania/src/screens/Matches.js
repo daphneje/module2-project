@@ -93,11 +93,11 @@ class Matches extends React.Component {
                             if (list[dateHeader]&&list[dateHeader].length>0) {
                                 const rowData = list[dateHeader].map( item => {
                                     return (
-                                        <tr key={uuid()}>
-                                            <td>{getLocalTime(item.match_start_iso)}</td>
-                                            <td>{item.home_team.name}</td>
-                                            <td>VS</td>
-                                            <td>{item.away_team.name}</td>
+                                        <tr key={uuid()} className="match-details-row">
+                                            <td className="match-time">{getLocalTime(item.match_start_iso)}</td>
+                                            <td className="match-home-team">{item.home_team.name}</td>
+                                            <td className="vs">VS</td>
+                                            <td className="match-away-team">{item.away_team.name}</td>
                                         </tr>
                                         )
                                 })
@@ -106,7 +106,7 @@ class Matches extends React.Component {
 
                                     <thead>
                                         <tr>
-                                            <th>{dateHeader}</th>
+                                            <th className="match-date-header">{dateHeader}</th>
                                         </tr>
                                     </thead>
 
