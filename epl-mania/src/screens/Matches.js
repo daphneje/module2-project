@@ -105,7 +105,7 @@ class Matches extends React.Component {
                                     <table key={uuid()} className="match-table">
 
                                     <thead>
-                                            <th  colspan="4" className="match-date-header">{dateHeader}</th>
+                                            <th  colspan="4" className="match-date-header">{dateHeader} {moment().format("YYYY")} | {moment().format("dddd")}</th>
                                     </thead>
 
                                     <tbody>
