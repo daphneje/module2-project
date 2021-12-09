@@ -1,0 +1,59 @@
+.matches-container{
+
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.match-table{
+
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 80%;
+}
+
+.match-date-header{
+
+}
+
+.match-details-row{
+    display: flex;
+
+    flex-flow: row nowrap;
+    
+}
+
+.match-time{
+
+    width: 25%;
+    padding: 20px 0;
+}
+
+.match-home-team{
+
+    width: 20%;
+    padding: 20px;
+    text-align: left;
+}
+
+.vs{
+
+    width: 20%;
+    padding: 20px;
+
+}
+
+.match-away-team{
+
+    width: 20%;
+    padding: 20px;
+    text-align: left;
+}
+
+.team-logo{
+
+    max-height: 20px;
+    padding: 20px;
+}

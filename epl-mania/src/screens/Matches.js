@@ -1,6 +1,6 @@
 import React from "react";
 import API from "../API";
-import "../css/Matches.css";
+import "./Matches.css";
 import * as moment from "moment";
 import uuid from 'react-uuid'
 
@@ -84,20 +84,20 @@ class Matches extends React.Component {
     return (
       <>
 
-        <div className="container-matches">
-
-            <h1>Matches</h1>
+        <div className="matches-container">
 
                     { 
                         dateHeaders.map(dateHeader => {
                             if (list[dateHeader]&&list[dateHeader].length>0) {
                                 const rowData = list[dateHeader].map( item => {
                                     return (
-                                        <tr key={uuid()} className="match-details-row">
+                                        <tr key={uuid()}>
+                                            <td className="match-details-row">
                                             <td className="match-time">{getLocalTime(item.match_start_iso)}</td>
-                                            <td className="match-home-team">{item.home_team.name}</td>
+                                            <img className="team-logo" src={item.home_team.logo} alt="team logo" /><td className="match-home-team">{item.home_team.name}</td>
                                             <td className="vs">VS</td>
-                                            <td className="match-away-team">{item.away_team.name}</td>
+                                            <img className="team-logo" src={item.away_team.logo} alt="team logo" /><td className="match-away-team">{item.away_team.name}</td>
+                                            </td>
                                         </tr>
                                         )
                                 })
@@ -105,9 +105,7 @@ class Matches extends React.Component {
                                     <table key={uuid()} className="match-table">
 
                                     <thead>
-                                        <tr>
-                                            <th className="match-date-header">{dateHeader}</th>
-                                        </tr>
+                                            <th  colspan="4" className="match-date-header">{dateHeader}</th>
                                     </thead>
 
                                     <tbody>
